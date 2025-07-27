@@ -15,7 +15,7 @@ import {
   Shield,
   Zap,
   AlertTriangle,
-  TrendingUpDown,
+  TrendingDown,
   Globe,
   Network,
   Database,
@@ -23,8 +23,8 @@ import {
   Lock,
   Store,
   BarChart3,
-  Settings,
-};
+  Settings
+} from "lucide-react";
 interface ApplicationsLessonOneProps {
   onBackToModule: () => void;
   onHomeClick: () => void;
