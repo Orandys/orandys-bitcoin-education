@@ -30,7 +30,8 @@ interface ApplicationsLessonFourProps {
     title: string;
     moduleTitle?: string;
     isNextModule?: boolean;
-  } 
+  } | null;
+  onSectionChange: (sectionId: string) => void;
 }
 
 export function ApplicationsLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonFourProps) {

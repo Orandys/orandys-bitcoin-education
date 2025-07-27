@@ -1,4 +1,4 @@
-import orandysLogo from 'figma:asset/c61e6dd123bffdb74bc6b36c0f4d0f50700a8333.png';
+import orandysLogo from '/orandys-logo.png';
 
 interface LogoProps {
   size?: 'small' | 'medium' | 'large';

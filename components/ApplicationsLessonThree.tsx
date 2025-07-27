@@ -31,6 +31,7 @@ interface ApplicationsLessonThreeProps {
     moduleTitle?: string;
     isNextModule?: boolean;
   } | null;
+  onSectionChange: (sectionId: string) => void;
 }
 
 export function ApplicationsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonThreeProps) {
