@@ -26,7 +26,6 @@ import { ApplicationsLessonFour } from './components/ApplicationsLessonFour';
 import { ApplicationsLessonFive } from './components/ApplicationsLessonFive';
 import { Footer } from './components/Footer';
 import { Toaster } from './components/ui/sonner';
-import orandysLogo from 'figma:asset/c61e6dd123bffdb74bc6b36c0f4d0f50700a8333.png';
 
 type ViewType = 'home' | 'course' | 'lesson' | 'contact';
 
@@ -47,16 +46,6 @@ export default function App() {
   // Configuration du favicon et titre au démarrage
   useEffect(() => {
     document.title = 'Orandys - Formation Bitcoin';
-    
-    const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
-    if (link) {
-      link.href = orandysLogo;
-    } else {
-      const newLink = document.createElement('link');
-      newLink.rel = 'icon';
-      newLink.href = orandysLogo;
-      document.head.appendChild(newLink);
-    }
   }, []);
 
   // Scroll vers le haut lors des changements de vue

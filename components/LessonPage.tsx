@@ -287,14 +287,7 @@ export function LessonPage({ onBackToModule, onHomeClick, onNextLesson, nextLess
                 )}
               </div>
               <Card className="flex-1 p-4 hover:shadow-md transition-shadow">
-                <div className="flex flex-col lg:flex-row gap-4">
-                  <div className="lg:w-32 lg:h-24 w-full h-40 flex-shrink-0">
-                    <ImageWithFallback
-                      src={era.image}
-                      alt={`${era.system} - ${era.period}`}
-                      className="w-full h-full object-cover rounded-lg shadow-sm"
-                    />
-                  </div>
+                <div className="flex flex-col gap-4">
                   <div className="flex-1">
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">
                       <Badge variant="outline" className="text-xs w-fit">

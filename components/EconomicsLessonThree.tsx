@@ -24,7 +24,6 @@ import {
   Smile,
   Frown,
   Meh,
-  TrendingUp,
   MessageSquare,
   Thermometer
 } from "lucide-react";

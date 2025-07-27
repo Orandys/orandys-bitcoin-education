@@ -2,7 +2,6 @@ import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Logo } from "./ui/logo";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import {
   Mail,
   BookOpen,
@@ -17,12 +16,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-interface ContactPageProps {
-  onHomeClick: () => void;
-  onSectionChange: (sectionId: string) => void;
-}
-
-export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) {
+export function ContactPage() {
   const projects = [
     {
       id: "orandys-advanced",
