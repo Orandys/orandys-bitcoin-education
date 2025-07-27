@@ -24,7 +24,7 @@ import {
   Store,
   BarChart3,
   Settings,
-};
+} from "lucide-react";
 interface ApplicationsLessonOneProps {
   onBackToModule: () => void;
   onHomeClick: () => void;
