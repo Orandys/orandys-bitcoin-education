@@ -2,27 +2,18 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/logo";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import commodityMoneyImage from 'figma:asset/0c0c81725f27451ff329ff01ecacaff4b99361d1.png';
-import metallicMoneyImage from 'figma:asset/326a026438396efe86012735f876d1bdc48dcaa8.png';
-import paperMoneyImage from 'figma:asset/417429014be037bdcbc36559c0b4e1c17d5ee7cb.png';
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  BookOpen,
+  Video,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
   Lightbulb,
   DollarSign,
   Coins,
   TrendingUp,
-  Shield,
-  Timer,
   ExternalLink,
   ChevronRight
 } from "lucide-react";
@@ -79,24 +70,21 @@ export function LessonPage({ onBackToModule, onHomeClick, onNextLesson, nextLess
       system: "Monnaies-marchandises",
       description: "Utilisation de biens précieux comme monnaie",
       limitations: ["Transport lourd", "Détérioration", "Standardisation"],
-      example: "Coquillages, sel, bétail comme monnaie",
-      image: commodityMoneyImage
+      example: "Coquillages, sel, bétail comme monnaie"
     },
     {
       period: "Moyen Âge",
       system: "Monnaies métalliques",
       description: "Pièces d'or et d'argent frappées",
       limitations: ["Rognage", "Contrefaçon", "Stockage sécurisé"],
-      example: "Pièces d'or du roi validées par son effigie",
-      image: metallicMoneyImage
+      example: "Pièces d'or du roi validées par son effigie"
     },
     {
       period: "Renaissance",
       system: "Papier-monnaie",
       description: "Billets représentant l'or stocké",
       limitations: ["Confiance en l'émetteur", "Faux billets", "Conversion or"],
-      example: "Billet de banque échangeable contre de l'or",
-      image: paperMoneyImage
+      example: "Billet de banque échangeable contre de l'or"
     },
     {
       period: "XXe siècle",
@@ -299,14 +287,7 @@ export function LessonPage({ onBackToModule, onHomeClick, onNextLesson, nextLess
                 )}
               </div>
               <Card className="flex-1 p-4 hover:shadow-md transition-shadow">
-                <div className="flex flex-col lg:flex-row gap-4">
-                  <div className="lg:w-32 lg:h-24 w-full h-40 flex-shrink-0">
-                    <ImageWithFallback
-                      src={era.image}
-                      alt={`${era.system} - ${era.period}`}
-                      className="w-full h-full object-cover rounded-lg shadow-sm"
-                    />
-                  </div>
+                <div className="flex flex-col gap-4">
                   <div className="flex-1">
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">
                       <Badge variant="outline" className="text-xs w-fit">

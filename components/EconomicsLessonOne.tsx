@@ -31,7 +31,7 @@ interface EconomicsLessonOneProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function EconomicsLessonOne({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: EconomicsLessonOneProps) {
+export function EconomicsLessonOne({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: EconomicsLessonOneProps) {
   return (
     <div className="container mx-auto px-4 sm:px-6 py-8 max-w-6xl">
       {/* Breadcrumb Navigation */}

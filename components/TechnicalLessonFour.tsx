@@ -1,27 +1,21 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  Play,
+  FileText,
+  Video,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
   Lightbulb,
   Key,
   Lock,
   Unlock,
-  Eye,
-  EyeOff,
   Hash,
-  Shield,
   ExternalLink,
-  Copy,
   CheckCircle2,
   AlertTriangle,
   Network
@@ -39,7 +33,7 @@ interface TechnicalLessonFourProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonFourProps) {
+export function TechnicalLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: TechnicalLessonFourProps) {
   const keyPairConcepts = [
     {
       icon: <Lock className="w-8 h-8" />,

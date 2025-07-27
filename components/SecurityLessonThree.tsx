@@ -1,29 +1,21 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
   Lightbulb,
   TrendingDown,
   Calendar,
   Coins,
   BarChart3,
   DollarSign,
-  Activity,
   Timer,
   ExternalLink,
-  Zap,
-  Calculator,
-  PieChart
+  Calculator
 } from "lucide-react";
 
 interface SecurityLessonThreeProps {
@@ -38,7 +30,7 @@ interface SecurityLessonThreeProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function SecurityLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: SecurityLessonThreeProps) {
+export function SecurityLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: SecurityLessonThreeProps) {
   const halvingConcepts = [
     {
       icon: <TrendingDown className="w-8 h-8" />,

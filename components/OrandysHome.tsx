@@ -1,25 +1,23 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  Coins, 
-  TrendingUp, 
-  Shield, 
-  Globe, 
-  Clock, 
-  Users, 
-  ArrowRight, 
-  BookOpen, 
-  Target, 
-  Lightbulb, 
-  Wrench, 
-  GraduationCap, 
+import { Logo } from "./ui/logo";
+import {
+  TrendingUp,
+  Shield,
+  Globe,
+  Clock,
+  Users,
+  ArrowRight,
+  BookOpen,
+  Target,
+  Lightbulb,
+  Wrench,
+  GraduationCap,
   Brain,
   Cpu,
-  User,
   Play
 } from "lucide-react";
-import orandysLogo from 'figma:asset/c61e6dd123bffdb74bc6b36c0f4d0f50700a8333.png';
 
 interface OrandysHomeProps {
   onStartLearning: () => void;
@@ -94,11 +92,7 @@ export function OrandysHome({ onStartLearning }: OrandysHomeProps) {
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-6 mb-10">
             <div className="w-24 h-24 rounded-full overflow-hidden shadow-2xl shadow-orange-500/25 transform hover:scale-105 transition-transform duration-300">
-              <img 
-                src={orandysLogo} 
-                alt="Orandys Logo" 
-                className="w-full h-full object-cover"
-              />
+              <Logo size="large" />
             </div>
             <div className="text-left">
               <h1 className="text-7xl font-bold bg-gradient-to-r from-orange-600 via-yellow-600 to-amber-600 bg-clip-text text-transparent">

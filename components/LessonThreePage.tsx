@@ -2,24 +2,20 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/logo";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  BookOpen,
+  FileText,
+  Video,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
   Lightbulb,
   TrendingUp,
   TrendingDown,
-  DollarSign,
   Building,
   Printer,
-  AlertTriangle,
   ExternalLink,
   BarChart3
 } from "lucide-react";
@@ -36,7 +32,7 @@ interface LessonThreePageProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function LessonThreePage({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: LessonThreePageProps) {
+export function LessonThreePage({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: LessonThreePageProps) {
   const monetaryProblems = [
     {
       icon: <Printer className="w-8 h-8" />,

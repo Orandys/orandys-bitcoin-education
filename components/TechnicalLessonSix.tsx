@@ -1,17 +1,14 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  FileText,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
+  Target,
   Lightbulb,
   AlertTriangle,
   Shield,
@@ -19,10 +16,7 @@ import {
   Network,
   DollarSign,
   Timer,
-  Hash,
   ExternalLink,
-  TrendingUp,
-  Lock,
   Eye
 } from "lucide-react";
 
@@ -38,7 +32,7 @@ interface TechnicalLessonSixProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonSix({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonSixProps) {
+export function TechnicalLessonSix({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: TechnicalLessonSixProps) {
   const doubleSpendProblem = [
     {
       icon: <DollarSign className="w-8 h-8" />,

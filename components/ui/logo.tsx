@@ -1,5 +1,3 @@
-import orandysLogo from 'figma:asset/c61e6dd123bffdb74bc6b36c0f4d0f50700a8333.png';
-
 interface LogoProps {
   size?: 'small' | 'medium' | 'large';
   className?: string;
@@ -13,12 +11,8 @@ export function Logo({ size = 'small', className = '' }: LogoProps) {
   };
 
   return (
-    <div className={`${sizeClasses[size]} rounded-full overflow-hidden ${className}`}>
-      <img 
-        src={orandysLogo} 
-        alt="Orandys Logo" 
-        className="w-full h-full object-cover"
-      />
+    <div className={`${sizeClasses[size]} rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center text-white font-bold ${className}`}>
+      <span className="text-sm">O</span>
     </div>
   );
 }

@@ -1,28 +1,22 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  Play,
+  FileText,
+  Video,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
   Lightbulb,
   Database,
   Network,
-  Shield,
   Link,
-  Copy,
   Server,
   ExternalLink,
-  Hash,
-  Globe,
-  Lock
+  Globe
 } from "lucide-react";
 
 interface TechnicalLessonOneProps {
@@ -37,7 +31,7 @@ interface TechnicalLessonOneProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonOne({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonOneProps) {
+export function TechnicalLessonOne({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: TechnicalLessonOneProps) {
   const blockchainConcepts = [
     {
       icon: <Database className="w-8 h-8" />,

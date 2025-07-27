@@ -1,58 +1,31 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Users, 
-  Target, 
+import {
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Users,
   Lightbulb,
-  ExternalLink,
   TrendingUp,
   TrendingDown,
   Activity,
-  AlertTriangle,
   Shield,
   Zap,
   BarChart3,
-  LineChart,
-  PieChart,
-  Calculator,
-  Users2,
   Building,
-  Wallet,
-  CreditCard,
-  DollarSign,
   Gauge,
-  ArrowUpDown,
   Eye,
-  Briefcase,
   Heart,
-  Star,
-  Globe,
-  Lock,
-  Layers,
-  Package,
   Network,
   Database,
-  CheckCircle2,
   Brain,
   Repeat,
   Smile,
   Frown,
   Meh,
-  Zap as Lightning,
-  Timer,
-  TrendingUpDown,
-  BookOpen,
   MessageSquare,
-  RotateCcw,
-  Thermometer,
-  Clipboard,
-  Target as Goal,
-  Award,
-  Settings
+  Thermometer
 } from "lucide-react";
 
 interface EconomicsLessonThreeProps {
@@ -67,7 +40,7 @@ interface EconomicsLessonThreeProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function EconomicsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: EconomicsLessonThreeProps) {
+export function EconomicsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: EconomicsLessonThreeProps) {
   const psychologicalCycles = [
     {
       phase: "Euphorie",
@@ -342,7 +315,7 @@ export function EconomicsLessonThree({ onBackToModule, onHomeClick, onNextLesson
       ],
       priceAction: "$1,000 → $20,000 → $3,200",
       duration: "24 mois cycle complet",
-      icon: <TrendingUpDown className="w-6 h-6" />
+      icon: <TrendingUp className="w-6 h-6" />
     },
     {
       period: "Adoption Institutionnelle 2020-2021",

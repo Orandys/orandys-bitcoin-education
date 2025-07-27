@@ -1,29 +1,23 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  FileText,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
+  Target,
   Lightbulb,
   Network,
   Timer,
   Layers,
   Share2,
   Wifi,
-  Server,
-  Activity,
   BarChart3,
   ExternalLink,
   Zap,
-  Globe,
   Eye,
   Edit,
   Shield
@@ -41,7 +35,7 @@ interface SecurityLessonTwoProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function SecurityLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: SecurityLessonTwoProps) {
+export function SecurityLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: SecurityLessonTwoProps) {
   const mempoolConcepts = [
     {
       icon: <Layers className="w-8 h-8" />,
