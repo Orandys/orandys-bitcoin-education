@@ -23,7 +23,7 @@ import {
   Gift,
   Trophy
 } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Logo } from "./ui/logo";
 
 interface ApplicationsLessonFiveProps {
