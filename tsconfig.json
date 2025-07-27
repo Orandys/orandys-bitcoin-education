@@ -10,7 +10,6 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -31,13 +30,13 @@
       "@/styles/*": ["./styles/*"]
     }
   },
-"include": [
-  "src",
-  "components",
-  "utils"
-],
-"exclude": [
-  "vite.config.ts"
-]
+  "include": [
+    "src",
+    "components",
+    "utils"
+  ],
+  "exclude": [
+    "vite.config.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
