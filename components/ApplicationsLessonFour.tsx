@@ -2,8 +2,6 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { 
-  BookOpen, 
-  Play, 
   FileText, 
   Video, 
   CheckCircle, 
@@ -11,7 +9,6 @@ import {
   ArrowLeft, 
   Clock, 
   Users, 
-  Target, 
   Lightbulb,
   Leaf,
   Zap,
@@ -20,14 +17,9 @@ import {
   Wind,
   Droplets,
   BarChart3,
-  TrendingUp,
-  TrendingDown,
   Globe,
   ExternalLink,
-  Recycle,
-  Battery,
   Cpu,
-  Calculator
 } from "lucide-react";
 
 interface ApplicationsLessonFourProps {
@@ -38,8 +30,7 @@ interface ApplicationsLessonFourProps {
     title: string;
     moduleTitle?: string;
     isNextModule?: boolean;
-  } | null;
-  onSectionChange: (sectionId: string) => void;
+  } 
 }
 
 export function ApplicationsLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonFourProps) {
