@@ -2,33 +2,20 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { 
-  BookOpen, 
-  Play, 
   FileText, 
-  Video, 
   CheckCircle, 
   ArrowRight, 
   ArrowLeft, 
   Clock, 
-  Users, 
-  Target, 
+  Users,  
   Lightbulb,
-  TrendingUp,
   Building,
   Cpu,
-  Globe,
   Shield,
-  AlertTriangle,
-  Zap,
   DollarSign,
-  Settings,
   Rocket,
   ExternalLink,
   BarChart3,
-  Lock,
-  Unlock,
-  Network,
-  Eye,
   Scale,
   Award,
   Heart,
@@ -47,8 +34,7 @@ interface ApplicationsLessonFiveProps {
     title: string;
     moduleTitle?: string;
     isNextModule?: boolean;
-  } | null;
-  onSectionChange: (sectionId: string) => void;
+  } 
 }
 
 export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonFiveProps) {
