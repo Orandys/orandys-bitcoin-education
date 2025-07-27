@@ -213,7 +213,7 @@ const traditionalVsBitcoinSystems = [
   const bitcoinPaymentDisadvantages = [
     {
       category: "Volatilité",
-      icon: <TrendingUpDown className="w-8 h-8" />,
+      icon: <TrendingDown className="w-8 h-8" />,
       color: "bg-red-500",
       challenges: [
         {
