@@ -3,8 +3,6 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/logo";
 import { 
-  BookOpen, 
-  Play, 
   FileText, 
   Video, 
   CheckCircle, 
@@ -12,7 +10,6 @@ import {
   ArrowLeft, 
   Clock, 
   Users, 
-  Target, 
   Lightbulb,
   AlertTriangle,
   TrendingDown,
@@ -21,8 +18,6 @@ import {
   BarChart3,
   DollarSign,
   Zap,
-  Globe,
-  Lock,
   ExternalLink,
   Settings
 } from "lucide-react";
@@ -36,7 +31,6 @@ interface ApplicationsLessonThreeProps {
     moduleTitle?: string;
     isNextModule?: boolean;
   } | null;
-  onSectionChange: (sectionId: string) => void;
 }
 
 export function ApplicationsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonThreeProps) {
