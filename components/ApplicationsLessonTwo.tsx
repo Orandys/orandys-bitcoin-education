@@ -434,44 +434,147 @@ export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesso
     }
   ];
 
-  const adoptionMetrics = [
-    {
-      category: "Entreprises Publiques",
-      description: "Sociétés cotées avec Bitcoin en treasury",
-      data: [
-        { year: "2020", count: "2", totalBTC: "70,000", value: "$1.2B", leaders: ["MicroStrategy", "Square"] },
-        { year: "2021", count: "12", totalBTC: "200,000", value: "$8.5B", leaders: ["Tesla", "Coinbase", "Marathon"] },
-        { year: "2022", count: "25", totalBTC: "250,000", value: "$6.8B", leaders: ["El Salvador", "MicroStrategy"] },
-        { year: "2023", count: "35", totalBTC: "280,000", value: "$12.1B", leaders: ["ETF applications", "BlackRock"] },
-        { year: "2024", count: "50+", totalBTC: "350,000+", value: "$20B+", leaders: ["ETF approvals", "Adoption massive"] }
-      ],
-      icon: <Building className="w-5 h-5" />
-    },
-    {
-      category: "Fonds & ETF",
-      description: "Véhicules d'investissement Bitcoin",
-      data: [
-        { year: "2020", count: "5", aum: "$2B", type: "Trusts privés", access: "Investisseurs accredited" },
-        { year: "2021", count: "15", aum: "$8B", type: "Trusts + futures ETF", access: "Public limité" },
-        { year: "2022", count: "20", aum: "$12B", type: "Expansion produits", access: "Institutionnel focus" },
-        { year: "2023", count: "30", aum: "$18B", type: "ETF applications", access: "Préparation retail" },
-        { year: "2024", count: "45+", aum: "$60B+", type: "Spot ETF approved", access: "Retail mainstream" }
-      ],
-      icon: <PieChart className="w-5 h-5" />
-    },
-    {
-      category: "Gouvernements & États",
-      description: "Adoption officielle par entités gouvernementales",
-      data: [
-        { year: "2020", count: "0", status: "Expérimentation", examples: "Recherches banques centrales" },
-        { year: "2021", count: "1", status: "Adoption officielle", examples: "El Salvador legal tender" },
-        { year: "2022", count: "2", status: "Intérêt croissant", examples: "RCA legal tender, Ukraine donations" },
-        { year: "2023", count: "5", status: "Régulations claires", examples: "UE MiCA, Suisse framework" },
-        { year: "2024", count: "10+", status: "Adoption accélérée", examples: "ETF USA, réserves stratégiques" }
-      ],
-      icon: <Globe className="w-5 h-5" />
-    }
-  ];
+  // Définissez les interfaces pour les différents types de données
+interface CorporateData {
+  year: string;
+  count: string;
+  totalBTC: string;
+  value: string;
+  leaders: string[];
+}
+
+interface FundData {
+  year: string;
+  count: string;
+  aum: string;
+  type: string;
+  access: string;
+}
+
+interface GovernmentData {
+  year: string;
+  count: string;
+  status: string;
+  examples: string;
+}
+
+type AdoptionData = CorporateData | FundData | GovernmentData;
+
+// Fonctions de garde de type
+function isCorporateData(data: AdoptionData): data is CorporateData {
+  return (data as CorporateData).totalBTC !== undefined;
+}
+
+function isFundData(data: AdoptionData): data is FundData {
+  return (data as FundData).aum !== undefined;
+}
+
+function isGovernmentData(data: AdoptionData): data is GovernmentData {
+  return (data as GovernmentData).status !== undefined;
+}
+
+// Mettez à jour votre tableau adoptionMetrics
+const adoptionMetrics = [
+  {
+    category: "Entreprises Publiques",
+    description: "Sociétés cotées avec Bitcoin en treasury",
+    data: [
+      { year: "2020", count: "2", totalBTC: "70,000", value: "$1.2B", leaders: ["MicroStrategy", "Square"] },
+      { year: "2021", count: "12", totalBTC: "200,000", value: "$8.5B", leaders: ["Tesla", "Coinbase", "Marathon"] },
+      { year: "2022", count: "25", totalBTC: "250,000", value: "$6.8B", leaders: ["El Salvador", "MicroStrategy"] },
+      { year: "2023", count: "35", totalBTC: "280,000", value: "$12.1B", leaders: ["ETF applications", "BlackRock"] },
+      { year: "2024", count: "50+", totalBTC: "350,000+", value: "$20B+", leaders: ["ETF approvals", "Adoption massive"] }
+    ] as CorporateData[],
+    icon: <Building className="w-5 h-5" />
+  },
+  {
+    category: "Fonds & ETF",
+    description: "Véhicules d'investissement Bitcoin",
+    data: [
+      { year: "2020", count: "5", aum: "$2B", type: "Trusts privés", access: "Investisseurs accredited" },
+      { year: "2021", count: "15", aum: "$8B", type: "Trusts + futures ETF", access: "Public limité" },
+      { year: "2022", count: "20", aum: "$12B", type: "Expansion produits", access: "Institutionnel focus" },
+      { year: "2023", count: "30", aum: "$18B", type: "ETF applications", access: "Préparation retail" },
+      { year: "2024", count: "45+", aum: "$60B+", type: "Spot ETF approved", access: "Retail mainstream" }
+    ] as FundData[],
+    icon: <PieChart className="w-5 h-5" />
+  },
+  {
+    category: "Gouvernements & États",
+    description: "Adoption officielle par entités gouvernementales",
+    data: [
+      { year: "2020", count: "0", status: "Expérimentation", examples: "Recherches banques centrales" },
+      { year: "2021", count: "1", status: "Adoption officielle", examples: "El Salvador legal tender" },
+      { year: "2022", count: "2", status: "Intérêt croissant", examples: "RCA legal tender, Ukraine donations" },
+      { year: "2023", count: "5", status: "Régulations claires", examples: "UE MiCA, Suisse framework" },
+      { year: "2024", count: "10+", status: "Adoption accélérée", examples: "ETF USA, réserves stratégiques" }
+    ] as GovernmentData[],
+    icon: <Globe className="w-5 h-5" />
+  }
+];
+
+// Dans votre composant, modifiez la section du rendu du tableau :
+<Card className="p-6 sm:p-8 mb-8">
+  <h2 className="text-xl sm:text-2xl font-semibold mb-6">Métriques d'Adoption Institutionnelle</h2>
+  <p className="text-muted-foreground mb-8">
+    Évolution de l'adoption de Bitcoin comme réserve de valeur par différents types d'acteurs.
+  </p>
+  
+  <div className="space-y-8">
+    {adoptionMetrics.map((metric, index) => (
+      <Card key={index} className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-10 h-10 bg-blue-500 text-white rounded-lg flex items-center justify-center">
+            {metric.icon}
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold">{metric.category}</h3>
+            <p className="text-sm text-muted-foreground">{metric.description}</p>
+          </div>
+        </div>
+        
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b">
+                <th className="text-left p-2">Année</th>
+                <th className="text-left p-2">Nombre</th>
+                <th className="text-left p-2">Valeur/Volume</th>
+                <th className="text-left p-2">Détails/Leaders</th>
+              </tr>
+            </thead>
+            <tbody>
+              {metric.data.map((item, i) => {
+                let valueColumn = '';
+                let detailsColumn = '';
+
+                if (isCorporateData(item)) {
+                  valueColumn = item.value;
+                  detailsColumn = item.leaders.join(', ');
+                } else if (isFundData(item)) {
+                  valueColumn = item.aum;
+                  detailsColumn = item.type;
+                } else if (isGovernmentData(item)) {
+                  valueColumn = item.status;
+                  detailsColumn = item.examples;
+                }
+
+                return (
+                  <tr key={i} className="border-b">
+                    <td className="p-2 font-medium">{item.year}</td>
+                    <td className="p-2">{item.count}</td>
+                    <td className="p-2">{valueColumn}</td>
+                    <td className="p-2 text-xs">{detailsColumn}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </Card>
+    ))}
+  </div>
+</Card>
 
   const comparisonTable = [
     {
