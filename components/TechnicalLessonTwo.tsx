@@ -1,29 +1,21 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  BookOpen,
+  Play,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
   Lightbulb,
   Send,
   Wallet,
-  Key,
-  Lock,
   Hash,
   Network,
   ExternalLink,
-  Copy,
-  Check,
-  AlertCircle,
-  Calculator
+  AlertCircle
 } from "lucide-react";
 
 interface TechnicalLessonTwoProps {
@@ -38,7 +30,7 @@ interface TechnicalLessonTwoProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonTwoProps) {
+export function TechnicalLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: TechnicalLessonTwoProps) {
   const transactionComponents = [
     {
       icon: <Send className="w-8 h-8" />,

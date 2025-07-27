@@ -2,44 +2,23 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Users,
   Lightbulb,
   ExternalLink,
-  TrendingUp,
   TrendingDown,
   Activity,
   AlertTriangle,
-  Shield,
-  Zap,
   BarChart3,
-  LineChart,
-  PieChart,
   Calculator,
   Timer,
-  Users2,
   Building,
   Wallet,
   CreditCard,
-  DollarSign,
-  Gauge,
-  ArrowUpDown,
-  Eye,
-  Briefcase,
-  Heart,
-  Star,
-  Globe,
-  Lock,
-  Layers,
-  Package,
-  Network,
-  Database,
-  CheckCircle2
+  Eye
 } from "lucide-react";
 
 interface EconomicsLessonTwoProps {
@@ -54,7 +33,7 @@ interface EconomicsLessonTwoProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function EconomicsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: EconomicsLessonTwoProps) {
+export function EconomicsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: EconomicsLessonTwoProps) {
   const volatilityCauses = [
     {
       cause: "Marché jeune et peu liquide",

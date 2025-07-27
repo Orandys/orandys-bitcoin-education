@@ -1,53 +1,29 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Users, 
-  Target, 
+import {
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Users,
   Lightbulb,
-  ExternalLink,
   TrendingUp,
-  TrendingDown,
   Shield,
   Zap,
-  AlertTriangle,
-  DollarSign,
   Coins,
   Building,
-  Clock,
   Globe,
-  Lock,
-  Unlock,
-  Eye,
-  EyeOff,
-  Banknote,
-  Wallet,
-  Store,
-  MapPin,
   BarChart3,
-  LineChart,
   PieChart,
   Calculator,
-  RefreshCw,
   Database,
   Activity,
   Star,
-  Award,
-  Bookmark,
-  Calendar,
-  Coffee,
-  ShoppingCart,
-  Package,
   Truck,
   Network,
-  User,
   Settings,
-  Bell,
   FileText,
-  ArrowUpDown,
+  ArrowUpDown
 } from "lucide-react";
 
 interface ApplicationsLessonTwoProps {
@@ -61,7 +37,7 @@ interface ApplicationsLessonTwoProps {
   } | null;
 }
 
-export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonTwoProps) {
+export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: ApplicationsLessonTwoProps) {
   const storeOfValueCharacteristics = [
     {
       characteristic: "Rareté",

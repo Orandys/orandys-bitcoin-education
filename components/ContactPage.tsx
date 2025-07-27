@@ -3,21 +3,19 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Logo } from "./ui/logo";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { 
-  Mail, 
-  ExternalLink, 
+import {
+  Mail,
   BookOpen,
   Globe,
   Users,
   Target,
   Lightbulb,
   Calendar,
-  Code,
   Podcast,
   FileText,
   Zap
 } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 interface ContactPageProps {
   onHomeClick: () => void;

@@ -1,30 +1,21 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  BookOpen,
+  Play,
+  FileText,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
   Lightbulb,
   Key,
   Shield,
-  Lock,
-  Unlock,
   AlertTriangle,
-  Eye,
-  EyeOff,
-  Copy,
   RefreshCw,
-  ExternalLink,
-  Smartphone,
-  HardDrive
+  ExternalLink
 } from "lucide-react";
 
 interface TechnicalLessonThreeProps {
@@ -39,7 +30,7 @@ interface TechnicalLessonThreeProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonThreeProps) {
+export function TechnicalLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: TechnicalLessonThreeProps) {
   const seedPhraseBasics = [
     {
       icon: <Key className="w-8 h-8" />,

@@ -33,7 +33,7 @@ interface ApplicationsLessonFourProps {
   } 
 }
 
-export function ApplicationsLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonFourProps) {
+export function ApplicationsLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: ApplicationsLessonFourProps) {
   const energyStats = [
     {
       icon: <Zap className="w-8 h-8" />,

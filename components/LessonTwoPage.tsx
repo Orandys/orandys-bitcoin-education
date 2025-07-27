@@ -2,25 +2,18 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/logo";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  BookOpen,
+  FileText,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
   Lightbulb,
-  Globe,
-  Coins,
   AlertTriangle,
-  TrendingDown,
   Cpu,
   ExternalLink,
-  Calendar,
   ChevronRight
 } from "lucide-react";
 import { courseSections } from "./CourseNavigation";

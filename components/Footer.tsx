@@ -3,17 +3,16 @@ import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Logo } from './ui/logo';
-import { 
-  Mail, 
-  Heart, 
-  Shield, 
-  ExternalLink, 
+import {
+  Mail,
+  Heart,
+  Shield,
+  ExternalLink,
   CheckCircle,
   Bitcoin,
-  CreditCard,
   Loader2,
   AlertTriangle
-} from 'lucide-react';
+} from "lucide-react";
 import { toast } from 'sonner@2.0.3';
 import { projectId, publicAnonKey } from '../utils/supabase/info';
 
