@@ -26,7 +26,7 @@ import { ApplicationsLessonFour } from './components/ApplicationsLessonFour';
 import { ApplicationsLessonFive } from './components/ApplicationsLessonFive';
 import { Footer } from './components/Footer';
 import { Toaster } from './components/ui/sonner';
-import orandysLogo from 'figma:asset/c61e6dd123bffdb74bc6b36c0f4d0f50700a8333.png';
+//  // Removed for build fix
 
 type ViewType = 'home' | 'course' | 'lesson' | 'contact';
 
