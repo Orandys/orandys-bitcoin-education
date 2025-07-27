@@ -46,20 +46,8 @@ import {
   User,
   Settings,
   Bell,
-  Mail,
-  Phone,
-  MessageSquare,
   FileText,
-  Timer,
-  Plus,
-  Minus,
   ArrowUpDown,
-  CheckCircle2,
-  X,
-  Download,
-  Upload,
-  Send,
-  Repeat
 } from "lucide-react";
 
 interface ApplicationsLessonTwoProps {
@@ -71,7 +59,6 @@ interface ApplicationsLessonTwoProps {
     moduleTitle?: string;
     isNextModule?: boolean;
   } | null;
-  onSectionChange: (sectionId: string) => void;
 }
 
 export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonTwoProps) {
