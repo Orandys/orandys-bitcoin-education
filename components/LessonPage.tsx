@@ -3,9 +3,10 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/logo";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import commodityMoneyImage from 'figma:asset/0c0c81725f27451ff329ff01ecacaff4b99361d1.png';
-import metallicMoneyImage from 'figma:asset/326a026438396efe86012735f876d1bdc48dcaa8.png';
-import paperMoneyImage from 'figma:asset/417429014be037bdcbc36559c0b4e1c17d5ee7cb.png';
+// Placeholder images - replace with actual assets
+const commodityMoneyImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%236b7280'%3ECommodity Money%3C/text%3E%3C/svg%3E";
+const metallicMoneyImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%236b7280'%3EMetallic Money%3C/text%3E%3C/svg%3E";
+const paperMoneyImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%236b7280'%3EPaper Money%3C/text%3E%3C/svg%3E";
 import { 
   BookOpen, 
   Play, 

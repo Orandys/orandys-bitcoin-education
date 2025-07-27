@@ -17,7 +17,7 @@ import {
   FileText,
   Zap
 } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 interface ContactPageProps {
   onHomeClick: () => void;
