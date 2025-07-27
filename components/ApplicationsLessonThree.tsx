@@ -33,7 +33,7 @@ interface ApplicationsLessonThreeProps {
   } | null;
 }
 
-export function ApplicationsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonThreeProps) {
+export function ApplicationsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo }: ApplicationsLessonThreeProps) {
   const critiques = [
     {
       icon: <TrendingDown className="w-8 h-8" />,

@@ -61,7 +61,7 @@ interface ApplicationsLessonTwoProps {
   } | null;
 }
 
-export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonTwoProps) {
+export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo }: ApplicationsLessonTwoProps) {
   const storeOfValueCharacteristics = [
     {
       characteristic: "Rareté",
