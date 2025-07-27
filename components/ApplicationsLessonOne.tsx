@@ -24,7 +24,7 @@ import {
   Store,
   BarChart3,
   Settings,
-}
+};
 interface ApplicationsLessonOneProps {
   onBackToModule: () => void;
   onHomeClick: () => void;
@@ -37,8 +37,14 @@ interface ApplicationsLessonOneProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function ApplicationsLessonOne({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonOneProps) {
-  const traditionalVsBitcoinSystems = [
+export function ApplicationsLessonOne({ 
+  onBackToModule, 
+  onHomeClick, 
+  onNextLesson, 
+  nextLessonInfo, 
+  onSectionChange 
+}: ApplicationsLessonOneProps) {
+const traditionalVsBitcoinSystems = [
     {
       characteristic: "Centralisation",
       traditional: {
