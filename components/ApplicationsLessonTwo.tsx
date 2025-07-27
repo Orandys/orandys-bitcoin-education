@@ -59,6 +59,7 @@ interface ApplicationsLessonTwoProps {
     moduleTitle?: string;
     isNextModule?: boolean;
   } | null;
+  onSectionChange?: (sectionId: string) => void;
 }
 
 export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonTwoProps) {
@@ -1204,9 +1205,22 @@ const adoptionMetrics = [
                     {metric.data.map((item, i) => (
                       <tr key={i} className="border-b">
                         <td className="p-2 font-medium">{item.year}</td>
-                        <td className="p-2">{item.count || item.totalBTC || item.aum || item.status}</td>
-                        <td className="p-2">{item.value || item.type || item.examples}</td>
-                        <td className="p-2 text-xs">{item.leaders?.join(', ') || item.access}</td>
+                        <td className="p-2">
+                          {item.count || 
+                           (isCorporateData(item) ? item.totalBTC : 
+                            isFundData(item) ? item.aum : 
+                            item.status)}
+                        </td>
+                        <td className="p-2">
+                          {isCorporateData(item) ? item.value : 
+                           isFundData(item) ? item.type : 
+                           item.examples}
+                        </td>
+                        <td className="p-2 text-xs">
+                          {isCorporateData(item) ? item.leaders?.join(', ') : 
+                           isFundData(item) ? item.access : 
+                           ''}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
