@@ -38,7 +38,7 @@ interface ApplicationsLessonTwoProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonTwoProps) {
+export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: ApplicationsLessonTwoProps) {
   const storeOfValueCharacteristics = [
     {
       characteristic: "Rareté",

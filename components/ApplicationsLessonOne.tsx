@@ -42,7 +42,7 @@ export function ApplicationsLessonOne({
   onHomeClick, 
   onNextLesson, 
   nextLessonInfo, 
-  onSectionChange 
+  onSectionChange: _onSectionChange
 }: ApplicationsLessonOneProps) {
 const traditionalVsBitcoinSystems = [
     {

@@ -38,7 +38,7 @@ interface TechnicalLessonFiveProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonFive({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonFiveProps) {
+export function TechnicalLessonFive({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: TechnicalLessonFiveProps) {
   const miningConcepts = [
     {
       icon: <Cpu className="w-8 h-8" />,

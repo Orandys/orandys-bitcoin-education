@@ -41,7 +41,7 @@ interface SecurityLessonTwoProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function SecurityLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: SecurityLessonTwoProps) {
+export function SecurityLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: SecurityLessonTwoProps) {
   const mempoolConcepts = [
     {
       icon: <Layers className="w-8 h-8" />,

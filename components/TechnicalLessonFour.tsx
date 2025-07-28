@@ -39,7 +39,7 @@ interface TechnicalLessonFourProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonFourProps) {
+export function TechnicalLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: TechnicalLessonFourProps) {
   const keyPairConcepts = [
     {
       icon: <Lock className="w-8 h-8" />,

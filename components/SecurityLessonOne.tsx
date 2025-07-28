@@ -43,7 +43,7 @@ export function SecurityLessonOne({
   onHomeClick,
   onNextLesson,
   nextLessonInfo,
-  onSectionChange,
+  onSectionChange: _onSectionChange,
 }: SecurityLessonOneProps) {
   const hashRateConcepts = [
     {

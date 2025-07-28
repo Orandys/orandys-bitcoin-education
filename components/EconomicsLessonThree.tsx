@@ -67,7 +67,7 @@ interface EconomicsLessonThreeProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function EconomicsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: EconomicsLessonThreeProps) {
+export function EconomicsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: EconomicsLessonThreeProps) {
   const psychologicalCycles = [
     {
       phase: "Euphorie",
