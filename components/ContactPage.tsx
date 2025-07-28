@@ -24,7 +24,7 @@ interface ContactPageProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) {
+export function ContactPage({ onHomeClick: _onHomeClick, onSectionChange: _onSectionChange }: ContactPageProps) {
   const projects = [
     {
       id: "orandys-advanced",
