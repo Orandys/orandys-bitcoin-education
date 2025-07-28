@@ -1,6 +1,6 @@
 import { Button } from "../ui/button";
 import { Home, Mail } from "lucide-react";
-import { motion } from "motion/react";
+// import { motion } from "motion";
 import { courseSections } from "../data/course-sections";
 import { getShortTitle } from "../utils/navigation-helpers";
 
@@ -27,10 +27,8 @@ export function DesktopNav({ activeSection, onSectionChange, onHomeClick, onCont
       <div className="w-px h-6 bg-gray-300 mx-2" />
       
       {courseSections.map((section) => (
-        <motion.div
+        <div
           key={section.id}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
           <Button
             variant={activeSection === section.id ? "default" : "ghost"}
@@ -52,14 +50,12 @@ export function DesktopNav({ activeSection, onSectionChange, onHomeClick, onCont
               {getShortTitle(section.title)}
             </span>
           </Button>
-        </motion.div>
+        </div>
       ))}
       
       <div className="w-px h-6 bg-gray-300 mx-2" />
       
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+      <div
       >
         <Button
           variant="ghost"
@@ -70,7 +66,7 @@ export function DesktopNav({ activeSection, onSectionChange, onHomeClick, onCont
           <Mail className="w-4 h-4 text-gray-600" />
           <span className="text-sm font-medium hidden xl:inline">Contact</span>
         </Button>
-      </motion.div>
+      </div>
     </nav>
   );
 }

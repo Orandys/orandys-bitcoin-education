@@ -31,9 +31,10 @@ interface ApplicationsLessonThreeProps {
     moduleTitle?: string;
     isNextModule?: boolean;
   } | null;
+  onSectionChange: (sectionId: string) => void;
 }
 
-export function ApplicationsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonThreeProps) {
+export function ApplicationsLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: ApplicationsLessonThreeProps) {
   const critiques = [
     {
       icon: <TrendingDown className="w-8 h-8" />,

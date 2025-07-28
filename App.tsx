@@ -26,7 +26,7 @@ import { ApplicationsLessonFour } from './components/ApplicationsLessonFour';
 import { ApplicationsLessonFive } from './components/ApplicationsLessonFive';
 import { Footer } from './components/Footer';
 import { Toaster } from './components/ui/sonner';
-import orandysLogo from 'figma:asset/c61e6dd123bffdb74bc6b36c0f4d0f50700a8333.png';
+// import orandysLogo from 'figma:asset/c61e6dd123bffdb74bc6b36c0f4d0f50700a8333.png';
 
 type ViewType = 'home' | 'course' | 'lesson' | 'contact';
 
@@ -50,11 +50,11 @@ export default function App() {
     
     const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
     if (link) {
-      link.href = orandysLogo;
+      link.href = "/placeholder-logo.png";
     } else {
       const newLink = document.createElement('link');
       newLink.rel = 'icon';
-      newLink.href = orandysLogo;
+      newLink.href = "/placeholder-logo.png";
       document.head.appendChild(newLink);
     }
   }, []);

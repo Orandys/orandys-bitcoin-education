@@ -1,6 +1,6 @@
 import { Button } from "../ui/button";
 import { Home, Mail } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+// import { motion, AnimatePresence } from "motion";
 import { courseSections } from "../data/course-sections";
 import { getShortTitle } from "../utils/navigation-helpers";
 
@@ -37,33 +37,23 @@ export function MobileMenu({
   };
 
   return (
-    <AnimatePresence>
+    <>
       {isOpen && (
         <>
           {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+          <div
             className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
             onClick={onClose}
           />
           
           {/* Menu Content */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+          <div
             className="fixed top-16 left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-gray-200/50 shadow-lg z-50 lg:hidden"
           >
             <div className="container mx-auto px-4 sm:px-6 py-4">
               <div className="space-y-2">
                 {/* Home Button */}
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <div
                 >
                   <Button
                     variant="ghost"
@@ -74,7 +64,7 @@ export function MobileMenu({
                     <Home className="w-5 h-5 text-gray-600" />
                     <span className="font-medium text-gray-700">Accueil</span>
                   </Button>
-                </motion.div>
+                </div>
 
                 {/* Separator */}
                 <div className="flex items-center gap-3 py-2">
@@ -85,13 +75,8 @@ export function MobileMenu({
 
                 {/* Course Sections */}
                 {courseSections.map((section, index) => (
-                  <motion.div
+                  <div
                     key={section.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                   >
                     <Button
                       variant="ghost"
@@ -119,14 +104,12 @@ export function MobileMenu({
                         </div>
                       </div>
                       {activeSection === section.id && (
-                        <motion.div
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
+                        <div
                           className="w-2 h-2 bg-white rounded-full"
                         />
                       )}
                     </Button>
-                  </motion.div>
+                  </div>
                 ))}
 
                 {/* Separator */}
@@ -135,12 +118,7 @@ export function MobileMenu({
                 </div>
 
                 {/* Contact Button */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: courseSections.length * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <div
                 >
                   <Button
                     variant="ghost"
@@ -154,12 +132,12 @@ export function MobileMenu({
                       <div className="text-xs mt-1 text-gray-500">À propos & projets</div>
                     </div>
                   </Button>
-                </motion.div>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </>
       )}
-    </AnimatePresence>
+    </>
   );
 }

@@ -6,46 +6,22 @@ import {
   ArrowRight, 
   ArrowLeft, 
   Users, 
-  Target, 
   Lightbulb,
-  ExternalLink,
   TrendingUp,
-  TrendingDown,
   Shield,
   Zap,
-  AlertTriangle,
-  DollarSign,
   Coins,
   Building,
-  Clock,
   Globe,
-  Lock,
-  Unlock,
-  Eye,
-  EyeOff,
-  Banknote,
-  Wallet,
-  Store,
-  MapPin,
   BarChart3,
-  LineChart,
   PieChart,
   Calculator,
-  RefreshCw,
   Database,
   Activity,
   Star,
-  Award,
-  Bookmark,
-  Calendar,
-  Coffee,
-  ShoppingCart,
-  Package,
   Truck,
   Network,
-  User,
   Settings,
-  Bell,
   FileText,
   ArrowUpDown,
 } from "lucide-react";
@@ -59,9 +35,10 @@ interface ApplicationsLessonTwoProps {
     moduleTitle?: string;
     isNextModule?: boolean;
   } | null;
+  onSectionChange: (sectionId: string) => void;
 }
 
-export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonTwoProps) {
+export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: ApplicationsLessonTwoProps) {
   const storeOfValueCharacteristics = [
     {
       characteristic: "Rareté",
@@ -1201,14 +1178,30 @@ const adoptionMetrics = [
                     </tr>
                   </thead>
                   <tbody>
-                    {metric.data.map((item, i) => (
-                      <tr key={i} className="border-b">
-                        <td className="p-2 font-medium">{item.year}</td>
-                        <td className="p-2">{item.count || item.totalBTC || item.aum || item.status}</td>
-                        <td className="p-2">{item.value || item.type || item.examples}</td>
-                        <td className="p-2 text-xs">{item.leaders?.join(', ') || item.access}</td>
-                      </tr>
-                    ))}
+                    {metric.data.map((item, i) => {
+                      let valueColumn = '';
+                      let detailsColumn = '';
+
+                      if (isCorporateData(item)) {
+                        valueColumn = item.value;
+                        detailsColumn = item.leaders.join(', ');
+                      } else if (isFundData(item)) {
+                        valueColumn = item.aum;
+                        detailsColumn = item.type;
+                      } else if (isGovernmentData(item)) {
+                        valueColumn = item.status;
+                        detailsColumn = item.examples;
+                      }
+
+                      return (
+                        <tr key={i} className="border-b">
+                          <td className="p-2 font-medium">{item.year}</td>
+                          <td className="p-2">{item.count}</td>
+                          <td className="p-2">{valueColumn}</td>
+                          <td className="p-2 text-xs">{detailsColumn}</td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>

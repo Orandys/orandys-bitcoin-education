@@ -23,7 +23,7 @@ import {
   Gift,
   Trophy
 } from "lucide-react";
-import { motion } from "motion/react";
+// import { motion } from "motion";
 import { Logo } from "./ui/logo";
 
 interface ApplicationsLessonFiveProps {
@@ -34,10 +34,11 @@ interface ApplicationsLessonFiveProps {
     title: string;
     moduleTitle?: string;
     isNextModule?: boolean;
-  } 
+  } | null;
+  onSectionChange: (sectionId: string) => void;
 }
 
-export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonFiveProps) {
+export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: ApplicationsLessonFiveProps) {
   const currentTrends = [
     {
       icon: <Building className="w-8 h-8" />,
@@ -627,19 +628,13 @@ export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLess
       </Card>
 
       {/* Félicitations - Fin de Formation */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+      <div
         className="mb-8"
       >
         <Card className="p-8 sm:p-12 bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 border-2 border-orange-200 shadow-xl">
           <div className="text-center space-y-8">
             {/* Badge de Réussite */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+            <div
               className="flex justify-center"
             >
               <div className="relative">
@@ -648,23 +643,18 @@ export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLess
                     <Logo size="large" />
                   </div>
                 </div>
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                <div
                   className="absolute -top-2 -right-2"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
                     <Trophy className="w-6 h-6 text-white" />
                   </div>
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Message de Félicitations */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+            <div
               className="space-y-4"
             >
               <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-600 via-yellow-600 to-amber-600 bg-clip-text text-transparent">
@@ -677,13 +667,10 @@ export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLess
                 Vous maîtrisez maintenant les fondamentaux monétaires, les aspects techniques, 
                 la sécurité, l'économie et les applications géopolitiques de Bitcoin.
               </p>
-            </motion.div>
+            </div>
 
             {/* Badge Earned */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
+            <div
             >
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-orange-200 max-w-md mx-auto">
                 <div className="flex items-center justify-center gap-3 mb-4">
@@ -701,13 +688,10 @@ export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLess
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Statistiques de Réussite */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
+            <div
             >
               <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto">
                 <div className="text-center">
@@ -723,13 +707,10 @@ export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLess
                   <div className="text-sm text-gray-600">Contenu</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Section de Soutien */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.5 }}
+            <div
               className="space-y-6 pt-8 border-t border-orange-200"
             >
               <div className="space-y-3">
@@ -761,10 +742,10 @@ export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLess
                   🚀 <strong>Restez connecté :</strong> Suivez nos prochains projets et modules avancés
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </Card>
-      </motion.div>
+      </div>
 
       {/* Navigation */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
