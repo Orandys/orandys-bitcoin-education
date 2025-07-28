@@ -22,8 +22,7 @@ import {
   Calculator,
   ExternalLink,
   Timer,
-  Network,
-  Pickaxe
+  Network
 } from "lucide-react";
 
 interface TechnicalLessonFiveProps {
@@ -320,7 +319,7 @@ export function TechnicalLessonFive({ onBackToModule, onHomeClick, onNextLesson,
       <div className="mb-8">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
           <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 text-white rounded-xl flex items-center justify-center shadow-lg">
-            <Pickaxe className="w-7 h-7" />
+            <Cpu className="w-7 h-7" />
           </div>
           <div className="flex-1">
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">

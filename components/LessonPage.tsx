@@ -3,9 +3,9 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/logo";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import commodityMoneyImage from 'figma:asset/0c0c81725f27451ff329ff01ecacaff4b99361d1.png';
-import metallicMoneyImage from 'figma:asset/326a026438396efe86012735f876d1bdc48dcaa8.png';
-import paperMoneyImage from 'figma:asset/417429014be037bdcbc36559c0b4e1c17d5ee7cb.png';
+const commodityMoneyImage = 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&q=80'; // Placeholder for commodity money
+const metallicMoneyImage = 'https://images.unsplash.com/photo-1528200489338-0b6edf96ca33?w=400&q=80'; // Placeholder for metallic money  
+const paperMoneyImage = 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&q=80'; // Placeholder for paper money
 import { 
   BookOpen, 
   Play, 
