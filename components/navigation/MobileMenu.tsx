@@ -54,8 +54,6 @@ export function MobileMenu({
               <div className="space-y-2">
                 {/* Home Button */}
                 <div
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   <Button
                     variant="ghost"
@@ -79,8 +77,6 @@ export function MobileMenu({
                 {courseSections.map((section, index) => (
                   <div
                     key={section.id}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                   >
                     <Button
                       variant="ghost"
@@ -123,8 +119,6 @@ export function MobileMenu({
 
                 {/* Contact Button */}
                 <div
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   <Button
                     variant="ghost"

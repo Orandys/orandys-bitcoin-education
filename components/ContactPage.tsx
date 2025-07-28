@@ -24,7 +24,7 @@ interface ContactPageProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) {
+export function ContactPage({ onHomeClick, onSectionChange: _onSectionChange }: ContactPageProps) {
   const projects = [
     {
       id: "orandys-advanced",
@@ -103,7 +103,6 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
           >
             <div className="flex justify-center">
               <div
-                whileHover={{ scale: 1.1, rotate: 360 }}
                 className="p-4 bg-white rounded-full shadow-xl shadow-orange-500/20"
               >
                 <Logo size="large" />
@@ -272,7 +271,6 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
                     <div className="text-center">
                       <div className="flex justify-center mb-6">
                         <div
-                          whileHover={{ scale: 1.1, rotate: 360 }}
                           className="p-4 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full shadow-lg"
                         >
                           {member.icon}

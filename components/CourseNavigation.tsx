@@ -37,7 +37,7 @@ export function CourseNavigation({ activeSection, onSectionChange, onHomeClick, 
   return (
     <>
       {/* Main Header */}
-      <motion.header 
+      <header 
         className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200/50 shadow-sm"
       >
         <div className="container mx-auto px-4 sm:px-6">
@@ -46,7 +46,6 @@ export function CourseNavigation({ activeSection, onSectionChange, onHomeClick, 
             {/* Logo & Brand */}
             <div 
               className="flex items-center gap-3"
-              whileHover={{ scale: 1.02 }}
             >
               <Button 
                 variant="ghost" 
@@ -55,7 +54,6 @@ export function CourseNavigation({ activeSection, onSectionChange, onHomeClick, 
                 className="flex items-center gap-3 hover:bg-gradient-to-r hover:from-orange-50 hover:to-yellow-50 transition-all duration-200 rounded-xl px-3 py-2"
               >
                 <div
-                  whileHover={{ rotate: 360 }}
                 >
                   <Logo size="large" />
                 </div>
@@ -92,7 +90,7 @@ export function CourseNavigation({ activeSection, onSectionChange, onHomeClick, 
             </div>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       {/* Mobile Menu */}
       <MobileMenu

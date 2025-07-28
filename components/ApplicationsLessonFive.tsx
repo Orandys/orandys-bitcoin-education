@@ -38,7 +38,7 @@ interface ApplicationsLessonFiveProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonFiveProps) {
+export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: ApplicationsLessonFiveProps) {
   const currentTrends = [
     {
       icon: <Building className="w-8 h-8" />,

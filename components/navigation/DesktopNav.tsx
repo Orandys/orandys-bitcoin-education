@@ -29,8 +29,6 @@ export function DesktopNav({ activeSection, onSectionChange, onHomeClick, onCont
       {courseSections.map((section) => (
         <div
           key={section.id}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
           <Button
             variant={activeSection === section.id ? "default" : "ghost"}
@@ -58,8 +56,6 @@ export function DesktopNav({ activeSection, onSectionChange, onHomeClick, onCont
       <div className="w-px h-6 bg-gray-300 mx-2" />
       
       <div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
       >
         <Button
           variant="ghost"
