@@ -37,7 +37,7 @@ interface TechnicalLessonOneProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonOne({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonOneProps) {
+export function TechnicalLessonOne({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: TechnicalLessonOneProps) {
   const blockchainConcepts = [
     {
       icon: <Database className="w-8 h-8" />,

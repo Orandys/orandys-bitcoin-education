@@ -36,7 +36,7 @@ interface LessonThreePageProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function LessonThreePage({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: LessonThreePageProps) {
+export function LessonThreePage({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: LessonThreePageProps) {
   const monetaryProblems = [
     {
       icon: <Printer className="w-8 h-8" />,

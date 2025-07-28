@@ -39,7 +39,7 @@ interface LessonFourPageProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function LessonFourPage({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: LessonFourPageProps) {
+export function LessonFourPage({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: LessonFourPageProps) {
   const cypherpunkPrinciples = [
     {
       icon: <EyeOff className="w-8 h-8" />,

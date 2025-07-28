@@ -23,7 +23,7 @@ import {
   Gift,
   Trophy
 } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Logo } from "./ui/logo";
 
 interface ApplicationsLessonFiveProps {
@@ -34,10 +34,11 @@ interface ApplicationsLessonFiveProps {
     title: string;
     moduleTitle?: string;
     isNextModule?: boolean;
-  } 
+  }
+  onSectionChange: (sectionId: string) => void;
 }
 
-export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonFiveProps) {
+export function ApplicationsLessonFive({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: ApplicationsLessonFiveProps) {
   const currentTrends = [
     {
       icon: <Building className="w-8 h-8" />,

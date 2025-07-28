@@ -39,7 +39,7 @@ interface TechnicalLessonThreeProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonThreeProps) {
+export function TechnicalLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: TechnicalLessonThreeProps) {
   const seedPhraseBasics = [
     {
       icon: <Key className="w-8 h-8" />,

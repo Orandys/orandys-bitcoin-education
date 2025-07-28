@@ -38,7 +38,7 @@ interface SecurityLessonThreeProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function SecurityLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: SecurityLessonThreeProps) {
+export function SecurityLessonThree({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: SecurityLessonThreeProps) {
   const halvingConcepts = [
     {
       icon: <TrendingDown className="w-8 h-8" />,

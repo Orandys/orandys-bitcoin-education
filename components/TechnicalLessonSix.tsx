@@ -38,7 +38,7 @@ interface TechnicalLessonSixProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonSix({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonSixProps) {
+export function TechnicalLessonSix({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: TechnicalLessonSixProps) {
   const doubleSpendProblem = [
     {
       icon: <DollarSign className="w-8 h-8" />,

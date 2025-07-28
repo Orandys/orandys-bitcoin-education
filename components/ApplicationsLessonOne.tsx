@@ -15,7 +15,7 @@ import {
   Shield,
   Zap,
   AlertTriangle,
-  TrendingUpDown,
+  TrendingUp,
   Globe,
   Network,
   Database,
@@ -24,7 +24,7 @@ import {
   Store,
   BarChart3,
   Settings,
-};
+} from "lucide-react";
 interface ApplicationsLessonOneProps {
   onBackToModule: () => void;
   onHomeClick: () => void;
@@ -42,7 +42,7 @@ export function ApplicationsLessonOne({
   onHomeClick, 
   onNextLesson, 
   nextLessonInfo, 
-  onSectionChange 
+  onSectionChange: _onSectionChange
 }: ApplicationsLessonOneProps) {
 const traditionalVsBitcoinSystems = [
     {
@@ -213,7 +213,7 @@ const traditionalVsBitcoinSystems = [
   const bitcoinPaymentDisadvantages = [
     {
       category: "Volatilité",
-      icon: <TrendingUpDown className="w-8 h-8" />,
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "bg-red-500",
       challenges: [
         {

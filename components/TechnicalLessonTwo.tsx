@@ -38,7 +38,7 @@ interface TechnicalLessonTwoProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function TechnicalLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: TechnicalLessonTwoProps) {
+export function TechnicalLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: TechnicalLessonTwoProps) {
   const transactionComponents = [
     {
       icon: <Send className="w-8 h-8" />,

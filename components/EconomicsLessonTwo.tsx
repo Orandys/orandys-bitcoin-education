@@ -54,7 +54,7 @@ interface EconomicsLessonTwoProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function EconomicsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: EconomicsLessonTwoProps) {
+export function EconomicsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: EconomicsLessonTwoProps) {
   const volatilityCauses = [
     {
       cause: "Marché jeune et peu liquide",

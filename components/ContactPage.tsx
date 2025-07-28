@@ -17,14 +17,14 @@ import {
   FileText,
   Zap
 } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 interface ContactPageProps {
   onHomeClick: () => void;
   onSectionChange: (sectionId: string) => void;
 }
 
-export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) {
+export function ContactPage({ onHomeClick: _onHomeClick, onSectionChange: _onSectionChange }: ContactPageProps) {
   const projects = [
     {
       id: "orandys-advanced",

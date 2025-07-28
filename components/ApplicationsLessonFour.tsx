@@ -30,10 +30,11 @@ interface ApplicationsLessonFourProps {
     title: string;
     moduleTitle?: string;
     isNextModule?: boolean;
-  } 
+  }
+  onSectionChange: (sectionId: string) => void;
 }
 
-export function ApplicationsLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonFourProps) {
+export function ApplicationsLessonFour({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange: _onSectionChange }: ApplicationsLessonFourProps) {
   const energyStats = [
     {
       icon: <Zap className="w-8 h-8" />,
