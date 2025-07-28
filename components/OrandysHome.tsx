@@ -19,7 +19,7 @@ import {
   User,
   Play
 } from "lucide-react";
-import orandysLogo from 'figma:asset/c61e6dd123bffdb74bc6b36c0f4d0f50700a8333.png';
+// import orandysLogo from 'figma:asset/c61e6dd123bffdb74bc6b36c0f4d0f50700a8333.png';
 
 interface OrandysHomeProps {
   onStartLearning: () => void;
@@ -95,7 +95,7 @@ export function OrandysHome({ onStartLearning }: OrandysHomeProps) {
           <div className="flex items-center justify-center gap-6 mb-10">
             <div className="w-24 h-24 rounded-full overflow-hidden shadow-2xl shadow-orange-500/25 transform hover:scale-105 transition-transform duration-300">
               <img 
-                src={orandysLogo} 
+                src={"/placeholder-logo.png"} 
                 alt="Orandys Logo" 
                 className="w-full h-full object-cover"
               />

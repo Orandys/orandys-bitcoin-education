@@ -44,7 +44,7 @@ import {
   Meh,
   Zap as Lightning,
   Timer,
-  TrendingUpDown,
+  TrendingUp,
   BookOpen,
   MessageSquare,
   RotateCcw,
@@ -342,7 +342,7 @@ export function EconomicsLessonThree({ onBackToModule, onHomeClick, onNextLesson
       ],
       priceAction: "$1,000 → $20,000 → $3,200",
       duration: "24 mois cycle complet",
-      icon: <TrendingUpDown className="w-6 h-6" />
+      icon: <TrendingUp className="w-6 h-6" />
     },
     {
       period: "Adoption Institutionnelle 2020-2021",

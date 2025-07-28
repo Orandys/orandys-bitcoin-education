@@ -17,7 +17,7 @@ import {
   FileText,
   Zap
 } from "lucide-react";
-import { motion } from "motion/react";
+// import { motion } from "motion";
 
 interface ContactPageProps {
   onHomeClick: () => void;
@@ -98,20 +98,16 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 py-16">
         <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div 
+          <div 
             className="text-center space-y-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
           >
             <div className="flex justify-center">
-              <motion.div
+              <div
                 whileHover={{ scale: 1.1, rotate: 360 }}
-                transition={{ duration: 0.6 }}
                 className="p-4 bg-white rounded-full shadow-xl shadow-orange-500/20"
               >
                 <Logo size="large" />
-              </motion.div>
+              </div>
             </div>
             
             <div className="space-y-4">
@@ -138,17 +134,14 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
                 Accès Libre
               </Badge>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Mission & Objectifs */}
       <section className="py-16">
         <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div
           >
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Notre Mission</h2>
@@ -160,11 +153,8 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {objectives.map((objective, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
                 >
                   <Card className="p-6 text-center hover:shadow-lg transition-all duration-300 border-0 bg-white">
                     <div className="flex justify-center mb-4">
@@ -175,20 +165,17 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
                     <h3 className="font-semibold mb-2">{objective.title}</h3>
                     <p className="text-sm text-gray-600">{objective.description}</p>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Projets en Cours */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
           >
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-4">
@@ -202,11 +189,8 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
 
             <div className="grid md:grid-cols-2 gap-6">
               {projects.map((project, index) => (
-                <motion.div
+                <div
                   key={project.id}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
                 >
                   <Card className="p-6 hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-gray-50 to-white">
                     <div className="flex items-start gap-4">
@@ -256,20 +240,17 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
                       </div>
                     </div>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+          <div
           >
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-4">
@@ -283,23 +264,19 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
 
             <div className="flex justify-center">
               {team.map((member, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
                   className="max-w-md"
                 >
                   <Card className="p-8 bg-white border-0 shadow-xl shadow-orange-500/10 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300">
                     <div className="text-center">
                       <div className="flex justify-center mb-6">
-                        <motion.div
+                        <div
                           whileHover={{ scale: 1.1, rotate: 360 }}
-                          transition={{ duration: 0.6 }}
                           className="p-4 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full shadow-lg"
                         >
                           {member.icon}
-                        </motion.div>
+                        </div>
                       </div>
                       <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                       <p className="text-gray-600 mb-6">{member.role}</p>
@@ -312,10 +289,10 @@ export function ContactPage({ onHomeClick, onSectionChange }: ContactPageProps) 
                       </Button>
                     </div>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
