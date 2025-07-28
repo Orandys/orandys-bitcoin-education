@@ -23,8 +23,8 @@ import {
   Lock,
   Store,
   BarChart3,
-  Settings,
-};
+  Settings
+} from "lucide-react";
 interface ApplicationsLessonOneProps {
   onBackToModule: () => void;
   onHomeClick: () => void;
