@@ -1,6 +1,6 @@
 import { Button } from "../ui/button";
 import { Home, Mail } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "motion";
 import { courseSections } from "../data/course-sections";
 import { getShortTitle } from "../utils/navigation-helpers";
 
