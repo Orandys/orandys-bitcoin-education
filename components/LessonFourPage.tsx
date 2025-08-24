@@ -2,29 +2,22 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/logo";
-import { 
-  BookOpen, 
-  Play, 
-  FileText, 
-  Video, 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Clock, 
-  Users, 
-  Target, 
+import {
+  BookOpen,
+  Video,
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Clock,
+  Users,
+  Target,
   Lightbulb,
   User,
-  Shield,
-  Eye,
   EyeOff,
-  Lock,
-  Key,
   Globe,
   ExternalLink,
   MessageSquare,
-  Code,
-  Calendar
+  Code
 } from "lucide-react";
 
 interface LessonFourPageProps {
@@ -39,7 +32,7 @@ interface LessonFourPageProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-export function LessonFourPage({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: LessonFourPageProps) {
+export function LessonFourPage({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: LessonFourPageProps) {
   const cypherpunkPrinciples = [
     {
       icon: <EyeOff className="w-8 h-8" />,

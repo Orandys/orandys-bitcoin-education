@@ -2,28 +2,18 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import {
-  BookOpen,
-  Play,
-  FileText,
-  Video,
   CheckCircle,
   ArrowRight,
   ArrowLeft,
   Clock,
   Users,
-  Target,
   Lightbulb,
   Cpu,
-  Zap,
   Globe,
-  TrendingUp,
   Shield,
   BarChart3,
-  Hash,
   ExternalLink,
-  Calculator,
-  Activity,
-  Server,
+  Calculator
 } from "lucide-react";
 
 interface SecurityLessonOneProps {
@@ -43,7 +33,6 @@ export function SecurityLessonOne({
   onHomeClick,
   onNextLesson,
   nextLessonInfo,
-  onSectionChange,
 }: SecurityLessonOneProps) {
   const hashRateConcepts = [
     {

@@ -3,7 +3,10 @@
 
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { AlertTriangle, Download, ExternalLink } from "lucide-react";
+import {
+  AlertTriangle,
+  ExternalLink
+} from "lucide-react";
 
 export function AssetMigrationGuide() {
   const figmaAssets = [

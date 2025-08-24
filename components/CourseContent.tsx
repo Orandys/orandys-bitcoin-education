@@ -2,7 +2,14 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { CourseSection } from "./CourseNavigation";
-import { Play, FileText, Video, ExternalLink, Clock, Home, ArrowLeft, CheckCircle } from "lucide-react";
+import {
+  Play,
+  FileText,
+  Video,
+  ExternalLink,
+  Clock,
+  CheckCircle
+} from "lucide-react";
 
 interface CourseContentProps {
   section: CourseSection;

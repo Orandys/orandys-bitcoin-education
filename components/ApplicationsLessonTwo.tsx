@@ -1,53 +1,29 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  Users, 
-  Target, 
+import {
+  CheckCircle,
+  ArrowRight,
+  ArrowLeft,
+  Users,
   Lightbulb,
-  ExternalLink,
   TrendingUp,
-  TrendingDown,
   Shield,
   Zap,
-  AlertTriangle,
-  DollarSign,
   Coins,
   Building,
-  Clock,
   Globe,
-  Lock,
-  Unlock,
-  Eye,
-  EyeOff,
-  Banknote,
-  Wallet,
-  Store,
-  MapPin,
   BarChart3,
-  LineChart,
   PieChart,
   Calculator,
-  RefreshCw,
   Database,
   Activity,
   Star,
-  Award,
-  Bookmark,
-  Calendar,
-  Coffee,
-  ShoppingCart,
-  Package,
   Truck,
   Network,
-  User,
   Settings,
-  Bell,
   FileText,
-  ArrowUpDown,
+  ArrowUpDown
 } from "lucide-react";
 
 interface ApplicationsLessonTwoProps {
@@ -61,7 +37,7 @@ interface ApplicationsLessonTwoProps {
   } | null;
 }
 
-export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo, onSectionChange }: ApplicationsLessonTwoProps) {
+export function ApplicationsLessonTwo({ onBackToModule, onHomeClick, onNextLesson, nextLessonInfo}: ApplicationsLessonTwoProps) {
   const storeOfValueCharacteristics = [
     {
       characteristic: "Rareté",
@@ -1204,9 +1180,9 @@ const adoptionMetrics = [
                     {metric.data.map((item, i) => (
                       <tr key={i} className="border-b">
                         <td className="p-2 font-medium">{item.year}</td>
-                        <td className="p-2">{item.count || item.totalBTC || item.aum || item.status}</td>
-                        <td className="p-2">{item.value || item.type || item.examples}</td>
-                        <td className="p-2 text-xs">{item.leaders?.join(', ') || item.access}</td>
+                        <td className="p-2">{item.count || (item as any).totalBTC || (item as any).aum || (item as any).status}</td>
+                        <td className="p-2">{(item as any).value || (item as any).type || (item as any).examples}</td>
+                        <td className="p-2 text-xs">{(item as any).leaders?.join(', ') || (item as any).access}</td>
                       </tr>
                     ))}
                   </tbody>
