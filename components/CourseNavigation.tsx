@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/logo";
 import { Menu, X } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { DesktopNav } from "./navigation/DesktopNav";
 import { MobileMenu } from "./navigation/MobileMenu";
 

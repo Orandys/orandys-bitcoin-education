@@ -3,9 +3,10 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/logo";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import commodityMoneyImage from 'figma:asset/0c0c81725f27451ff329ff01ecacaff4b99361d1.png';
-import metallicMoneyImage from 'figma:asset/326a026438396efe86012735f876d1bdc48dcaa8.png';
-import paperMoneyImage from 'figma:asset/417429014be037bdcbc36559c0b4e1c17d5ee7cb.png';
+// Placeholder for missing assets - these should be replaced with actual images
+// import commodityMoneyImage from 'figma:asset/0c0c81725f27451ff329ff01ecacaff4b99361d1.png';
+// import metallicMoneyImage from 'figma:asset/326a026438396efe86012735f876d1bdc48dcaa8.png';
+// import paperMoneyImage from 'figma:asset/417429014be037bdcbc36559c0b4e1c17d5ee7cb.png';
 import { 
   BookOpen, 
   Play, 
@@ -80,7 +81,7 @@ export function LessonPage({ onBackToModule, onHomeClick, onNextLesson, nextLess
       description: "Utilisation de biens précieux comme monnaie",
       limitations: ["Transport lourd", "Détérioration", "Standardisation"],
       example: "Coquillages, sel, bétail comme monnaie",
-      image: commodityMoneyImage
+      image: undefined // commodityMoneyImage - placeholder for missing asset
     },
     {
       period: "Moyen Âge",
@@ -88,7 +89,7 @@ export function LessonPage({ onBackToModule, onHomeClick, onNextLesson, nextLess
       description: "Pièces d'or et d'argent frappées",
       limitations: ["Rognage", "Contrefaçon", "Stockage sécurisé"],
       example: "Pièces d'or du roi validées par son effigie",
-      image: metallicMoneyImage
+      image: undefined // metallicMoneyImage - placeholder for missing asset
     },
     {
       period: "Renaissance",
@@ -96,7 +97,7 @@ export function LessonPage({ onBackToModule, onHomeClick, onNextLesson, nextLess
       description: "Billets représentant l'or stocké",
       limitations: ["Confiance en l'émetteur", "Faux billets", "Conversion or"],
       example: "Billet de banque échangeable contre de l'or",
-      image: paperMoneyImage
+      image: undefined // paperMoneyImage - placeholder for missing asset
     },
     {
       period: "XXe siècle",
